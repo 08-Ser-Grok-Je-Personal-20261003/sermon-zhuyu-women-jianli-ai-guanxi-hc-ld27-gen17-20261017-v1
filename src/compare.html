@@ -1,7 +1,15 @@
 <header class="sec">
-  <h1 style="font-size:clamp(1.6rem,1.2rem+2.4vw,2.6rem);margin-bottom:.3em">{{I scale icolor-c}} 六份信仰文件的比较</h1>
-  <p class="lead" style="font-size:1rem">三大普世信经（古教会）和三项联合信条（宗教改革后的欧陆改革宗）：它们各自为什么写、怎样写、怎样互相咬合？本页的所有信条引文由构建脚本从 corpus 逐字载入；表格中的判断是笔者的概括，请以原文为准。</p>
-  <div class="chips"><a class="chip gold" href="#h-why">为什么需要信经</a><a class="chip creed" href="#h-creeds">三大信经</a><a class="chip grace" href="#h-forms">三项联合信条</a><a class="chip water" href="#h-matrix">互相咬合：矩阵</a><a class="chip rose" href="#h-link">与本主日的连接</a></div>
+  <h1 style="font-size:clamp(1.6rem,1.2rem+2.4vw,2.6rem);margin-bottom:.3em">{{I scale icolor-c}} 六份信仰文件：为什么是三，又为什么是三</h1>
+  <div class="grid g2">
+    <div class="card tint-creed rv"><h3>{{I scroll icolor-c}} 为什么是三篇信经，不是一篇？</h3>
+      <ul><li><b>使徒信经</b>：最短的总纲，洗礼与初学用，适合会众与孩子背诵。</li><li><b>尼西亚信经</b>：为“基督与圣灵是真神”划界（驳亚流主义）。</li><li><b>亚他那修信经</b>：用对称的句子精确说明一神三位、基督二性。</li></ul>
+      <p class="small">三种声音：简短、庄严、精确；比利时信条第9条明确接受这三篇（以不与圣经相悖为条件）。</p></div>
+    <div class="card tint-grace rv"><h3>{{I layers icolor-n}} 为什么是三项联合信条，不是一份？</h3>
+      <ul><li><b>比利时信条</b>：告白，“我们是谁”，向外说明信仰。</li><li><b>海德堡要理问答</b>：教导，“我们靠什么活”，以安慰为起点。</li><li><b>多特信经</b>：判断，“为何不这样说”，回应抗辩派。</li></ul>
+      <p class="small">体裁与问题都不同，所以不能互相取代；它们都在圣经之下。</p></div>
+  </div>
+  <p class="small muted">所有信条引文由构建脚本从 corpus 逐字载入；表格中的判断是笔者的概括，请以原文为准。</p>
+  <div class="chips"><a class="chip gold" href="#h-why">为什么要信经</a><a class="chip creed" href="#h-creeds">三大信经</a><a class="chip grace" href="#h-forms">三项联合信条</a><a class="chip water" href="#h-matrix">矩阵与图</a><a class="chip rose" href="#h-link">与本主日</a></div>
 </header>
 
 <section class="sec" id="s-why">
@@ -10,14 +18,8 @@
   {{SENT BC 7 text | 我们相信，圣经中包含了神全部的旨意}}
   <p>同一部比利时信条在谈三位一体时，又明说教会愿意接受三大古信经，条件是与圣经不相悖：</p>
   {{SENT BC 9 text | 因此，在这一教义上，我们甘愿接受}}
-  <p>海德堡要理问答则把《使徒信经》放进“基督徒必须相信什么”的答案里：</p>
-  {{SENT HC 22 answer | 基督徒必须相信福音的一切应许}}
   {{INC mindmap-creeds}}
-  <div class="grid g2">
-    <div class="card tint-gold rv"><h3>{{I book icolor-g}} 为什么要有信经</h3><ul><li><b>回应圣经</b>：圣经已经说话，教会需要用清晰的话回答“你们信什么”。</li><li><b>同声承认</b>：信仰不只是个人感受，也是共同的口。</li><li><b>防范错谬</b>：每份文件几乎都有它回答的具体争论（见下）。</li><li><b>教导传承</b>：给新信徒与儿女一条可行的路。</li></ul></div>
-    <div class="card tint-creed rv"><h3>{{I layers icolor-c}} 为什么不止一份</h3><ul><li><b>问题不同</b>：古教会要回答“基督和圣灵是谁”；宗教改革要回答“人怎样与神和好、教会怎样识别”。</li><li><b>体裁不同</b>：信经重在宣认，要理问答重在教导与安慰，教会条款重在系统告白。</li><li><b>互相补充</b>：没有一份能独自说完圣经的全部；它们是几面从不同角度看同一座山的窗。</li></ul></div>
-  </div>
-  <div class="co warn rv"><div><b class="t">警戒：信经不能取代圣经</b><p>在改革宗传统里，信经是“从属的标准”（subordinate standards），随时可以被圣经纠正；当我们背诵信经时，并不是在背诵一份与圣经同等的文本。</p></div></div>
+  <p class="small"><b>警戒</b>：改革宗把信经看作“从属的标准”，随时可被圣经纠正；背诵信经不是在背一份与圣经同等的文本。</p>
 </section>
 
 <section class="sec" id="s-creeds">
@@ -28,16 +30,12 @@
   <div class="tbl-wrap min3 rv"><table>
     <thead><tr><th>项目</th><th>使徒信经</th><th>尼西亚信经</th><th>亚他那修信经</th></tr></thead>
     <tbody>
-    <tr><th scope="row">来源与年代（据 ccifellowship.org 简介，笔者概括）</th><td>并非使徒所写，因总结使徒的教导而得名；今天的文本以约公元400年罗马教会所用的信经为基础，其用法可追溯到更早。</td><td>325年尼西亚会议驳斥亚流主义等异端；381年君士坦丁堡会议正式采纳。</td><td>以亚他那修（293–373）命名，但他并非作者；最早见于6世纪上半叶，作者不详，源于西方教会。</td></tr>
-    <tr><th scope="row">传统归属与学界看法</th><td>中世纪曾有“十二使徒各说一句”的传说；这一说法一般不被当作历史事实（此处只作提示）。</td><td>常称“尼西亚—君士坦丁堡信经”；两次会议的文本关系，学界仍有讨论（此处不展开）。</td><td>古时归于亚他那修；今天多认为不是他写的。</td></tr>
-    <tr><th scope="row">要回答的问题（笔者概括）</th><td>“基督徒信什么？”——洗礼与初学的基本总纲。</td><td>“耶稣基督与圣灵是不是真神？”——应对否认基督神性的主张。</td><td>“三位一体与基督二性要怎样精确地说？”——用清晰的句子划出界线。</td></tr>
+    <tr><th scope="row">来源与年代（据 ccifellowship.org 简介，笔者概括）</th><td>并非使徒所写，因总结使徒的教导而得名（中世纪“十二使徒各一句”的传说一般不当作史实）；今天的文本以约公元400年罗马教会所用的信经为基础，其用法可追溯到更早。</td><td>325年尼西亚会议驳斥亚流主义等异端；381年君士坦丁堡会议正式采纳。</td><td>以亚他那修（293–373）命名，但他并非作者（今天多认为不是他写的）；最早见于6世纪上半叶，作者不详，源于西方教会。</td></tr>
+        <tr><th scope="row">要回答的问题（笔者概括）</th><td>“基督徒信什么？”——洗礼与初学的基本总纲。</td><td>“耶稣基督与圣灵是不是真神？”——应对否认基督神性的主张。</td><td>“三位一体与基督二性要怎样精确地说？”——用清晰的句子划出界线。</td></tr>
     <tr><th scope="row">人称</th><td>“我信”（单数）</td><td>“我们信”（复数，会众的口）</td><td>第三人称的教义陈述，开头与结尾有“大公信仰”的劝诫</td></tr>
     <tr><th scope="row">结构（据原文）</th><td>父 · 子 · 灵 · 教会 · 赦罪 · 身体复活 · 永生</td><td>父 · 子（最长）· 灵 · 教会 · 洗礼 · 复活与新世界</td><td>劝诫 → 三位一体（第3–28条）→ 基督二性与工作（第29–41条）→ 结语</td></tr>
     <tr><th scope="row">篇幅（程序统计）</th><td>约 {{VAR n_apostles}} 字 · {{VAR l_apostles}} 行</td><td>约 {{VAR n_nicene}} 字 · {{VAR l_nicene}} 行</td><td>约 {{VAR n_athanasian}} 字 · {{VAR l_athanasian}} 行</td></tr>
-    <tr><th scope="row">常见用途</th><td>洗礼、初学教导与会众诵读（各教会习惯不同）。</td><td>主日崇拜时会众诵读的传统，尤其在东西方教会。</td><td>较少在每周崇拜中使用；常见于教义教导与特别场合。</td></tr>
-    <tr><th scope="row">在本站</th><td><a href="creeds-read.html#apostles">阅读/背诵</a></td><td><a href="creeds-read.html#nicene">阅读/背诵</a></td><td><a href="creeds-read.html#athanasian">阅读/背诵</a></td></tr>
-    </tbody></table></div>
-  <p class="muted small">注：“常见用途”一栏说的是教会历史上的常见习惯，各教会和各时代不尽相同，笔者没有统计数据，请当作概略。</p>
+            </tbody></table></div>
 
   <h3 id="h-creeds-diff">相同与不同（逐项对照原文）</h3>
   <div class="tbl-wrap min3 rv"><table>
@@ -56,13 +54,6 @@
   <div class="co key rv"><div><b class="t">重点：洗礼出现在哪里？</b><p>三篇里只有尼西亚信经直接提到洗礼，并把它与“罪得赦免”连在一句：</p>{{CPARA nicene 5}}<p>这与本主日的题目相连：洗礼是一个“印证”的记号（见<a href="covenant-baptism.html">圣约与洗礼</a>），而不是赦罪本身。</p></div></div>
   <div class="co info rv"><div><b class="t">“和子”的差别</b><p>尼西亚信经与亚他那修信经的圣灵部分都写圣灵“从父和子而出”。东西方教会在这一点上长期有分歧（见 ccifellowship.org 对尼西亚信经的简介）；本页不展开神学裁断，只让原文说话：</p>{{CPARA nicene 3}}</div></div>
 
-  <h3 id="h-creeds-why3">为什么是三份，而不是一份？</h3>
-  <ul>
-   <li><b>使徒信经</b>是最短的总纲，适合会众与孩子背诵。</li>
-   <li><b>尼西亚信经</b>在“基督”一段特别加长，是为了划清基督与受造物的界线。</li>
-   <li><b>亚他那修信经</b>则用对称的句子把“一神三位”与“一位二性”说清。</li>
-  </ul>
-  <p>改革宗的三项联合信条之一明确接受这三篇（见上文比利时信条第9条的引文）。三份合起来，才有“简短”“庄严”“精确”三种声音。</p>
 </section>
 
 <section class="sec" id="s-forms">
@@ -76,18 +67,8 @@
    <tr><th scope="row">主要目的</th><td><b>告白</b>：向官方与社会说明改革宗信仰的内容；据 ccifellowship.org 简介，曾寄给西班牙王腓力二世。</td><td><b>教导</b>：用于教导会众，尤其是年轻人；以52个主日分段。</td><td><b>判断</b>：回应抗辩派（阿民念及其追随者）的五项主张。</td></tr>
    <tr><th scope="row">结构（程序统计）</th><td>{{VAR n_bc}} 条</td><td>{{VAR n_hcld}} 主日，{{VAR n_hcq}} 问</td><td>五个要点；本站分{{VAR n_dort_heads}}页（第三、四合并），共{{VAR n_dort_art}} 个条目（含“错谬反驳”）</td></tr>
    <tr><th scope="row">篇幅（约，字）</th><td>{{VAR chars_bc}}</td><td>{{VAR chars_hc}}</td><td>{{VAR chars_dort}}</td></tr>
-   <tr><th scope="row">与本主日的关系</th><td>第34条：洗礼与儿女</td><td>主日27（问72–74）</td><td>第一要点第17条：信徒儿女</td></tr>
-   <tr><th scope="row">阅读</th><td><a href="belgic.html">全文</a></td><td><a href="hc.html">全文</a></td><td><a href="dort.html">全文</a></td></tr>
-  </tbody></table></div>
+        </tbody></table></div>
   <p class="muted small">各文件的版本与翻译在不同教会略有差异；本站引文一律以 ccifellowship.org 存档的译文为准。</p>
-  <h3 id="h-forms-why3">为什么是三份？</h3>
-  <div class="grid">
-   <div class="card tint-grace rv"><h3>我们是谁？</h3><p>比利时信条：向外说明信仰的整体内容。</p></div>
-   <div class="card tint-water rv"><h3>我们靠什么活？</h3><p>海德堡要理问答：以“唯一的安慰”为起点，把罪、救赎、感恩三个部分讲给会众。</p></div>
-   <div class="card tint-rose rv"><h3>为什么拒绝某些教导？</h3><p>多特信经：在争论中划出恩典的界线，并给出牧养的话。</p></div>
-  </div>
-  <div class="co mem rv"><div><b class="t">记忆：问题式记法</b><p>告白 → 教导 → 判断；“我们是谁 · 我们靠什么活 · 我们为何不这样说”。</p></div></div>
-  <div class="co info rv"><div><b class="t">顺带一提：威斯敏斯特标准</b><p>（以下为笔者的概括，非引文）英国与苏格兰的长老会系统另有威斯敏斯特信条与大小要理问答，成文于17世纪。两个传统在许多教义上相近，包括婴孩洗礼；但文本不同，本站不做逐字对照。</p></div></div>
 </section>
 
 <section class="sec" id="s-matrix">
@@ -114,14 +95,6 @@
 
 <section class="sec" id="s-link">
   <h2 id="h-link"><span class="num">d</span>与本主日的连接</h2>
-  <div class="tbl-wrap min2 rv"><table>
-   <thead><tr><th>文件</th><th>它怎样帮助我们读创世记17章</th></tr></thead><tbody>
-   <tr><td>使徒信经</td><td>“圣而公之教会”与“罪得赦免”：约的记号指向的实体。</td></tr>
-   <tr><td>尼西亚信经</td><td>“独一洗礼”与“罪得赦免”相连：洗礼是印证，不是赦罪本身。</td></tr>
-   <tr><td>亚他那修信经</td><td>基督既是神又是人，是约的中保（见第29–41条）。</td></tr>
-   <tr><td>海德堡要理问答</td><td>主日27：儿童属于神的约与教会，洗礼取代割礼。</td></tr>
-   <tr><td>比利时信条</td><td>第34条：洗礼印证约，弃绝重洗派的错谬。</td></tr>
-   <tr><td>多特信经</td><td>I.17：信徒儿女与约；这是对在婴幼期离世的情形的牧养，不是“人人必得救”的承诺。</td></tr>
-  </tbody></table></div>
-  <p><a class="btn" href="covenant-baptism.html">{{I drop}} 进入圣约与洗礼专题</a> <a class="btn ghost" href="sermon.html#h-four-heads">回到四个要点</a></p>
+  <p>古信经里，使徒信经的“圣而公之教会”“罪得赦免”与尼西亚信经的“独一洗礼”点出洗礼所印证的内容；联合信条里，<a href="hc.html#ld27">HC 主日27</a>、<a href="belgic.html#art34">比利时信条第34条</a>、<a href="dort.html#d1-17">多特I.17</a>分别从教导、告白、牧养三个角度谈儿女与约。</p>
+  <p><a class="btn" href="covenant-baptism.html">{{I drop}} 圣约与洗礼专题</a> <a class="btn ghost" href="sermon.html#h-four-heads">回到四个要点</a></p>
 </section>

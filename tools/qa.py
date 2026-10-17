@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = Path(sys.argv[1]) if len(sys.argv) > 1 and not sys.argv[1].startswith("--") else Path("/workspace/shots-zw-v1")
 SHOTS = "--shots" in sys.argv
 OUT.mkdir(parents=True, exist_ok=True)
-WIDTHS = [(360, 780), (768, 1024), (1280, 800)]
+WIDTHS = [(360, 780), (400, 860), (768, 1024), (1280, 800)]
 pages = [p.name for p in sorted(ROOT.glob("*.html"))]
 
 JS_OVERFLOW = r"""

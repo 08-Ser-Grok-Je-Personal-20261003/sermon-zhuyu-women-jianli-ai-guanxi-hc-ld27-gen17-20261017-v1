@@ -228,12 +228,12 @@ svg .t-mut{fill:var(--muted)}
 .sitecard .go{margin-top:auto;font:700 .85rem var(--sans);color:var(--gold)}
 /* memory big */
 .mem4{display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));margin:0 0 1rem}
-.mem4>div{padding:1rem;border-radius:18px;color:#fff;position:relative;overflow:hidden;min-width:0}
-.mem4>div b{display:block;font-size:1.25rem;margin-bottom:.2rem}
-.mem4>div span{font:.88rem/1.5 var(--sans);opacity:.95;display:block}
+.mem4>div,.mem4>a{display:block;text-decoration:none;padding:1rem;border-radius:18px;color:#fff;position:relative;overflow:hidden;min-width:0}
+.mem4>div b,.mem4>a b{display:block;font-size:1.25rem;margin-bottom:.2rem}
+.mem4>div span,.mem4>a span{font:.88rem/1.5 var(--sans);opacity:.95;display:block}
 .mem4 .n{position:absolute;right:.7rem;top:-.4rem;font:800 3.6rem var(--sans);opacity:.2}
 .m1{background:linear-gradient(135deg,#b7860b,#e2b53e);color:#1b1405 !important}.m2{background:linear-gradient(135deg,#8f1620,#d23a45)}.m3{background:linear-gradient(135deg,#1c6aa5,#3fa6e0)}.m4{background:linear-gradient(135deg,#1f7a4a,#46b97c)}
-.m1 span,.m1 b{color:#1b1405}
+.m1 span,.m1 b{color:#1b1405}.mem4>a{color:#fff}.mem4>a.m1{color:#1b1405}
 .big-quote{font-size:clamp(1.15rem,1rem + 1vw,1.5rem);font-weight:700;line-height:1.7;text-align:center;padding:1rem;border-radius:20px;background:linear-gradient(135deg,color-mix(in srgb,var(--gold) 18%,var(--solid)),color-mix(in srgb,var(--creed) 12%,var(--solid)));border:1px solid var(--line)}
 /* timeline */
 .tl{position:relative;margin:0 0 1.2rem;padding:0 0 0 1.6rem;list-style:none;border-left:3px solid color-mix(in srgb,var(--gold) 60%,transparent)}
@@ -357,3 +357,9 @@ svg .t-mut{fill:var(--muted)}
 .matrix td .vs cite{font-size:.72rem}
 @media (max-width:420px){.brand{font-size:.9rem;gap:.4rem}.brand .logo{width:26px;height:26px}}
 .fc,.fc-in{min-height:300px}
+
+.thesis{font-size:clamp(1.05rem,1rem + .4vw,1.25rem);font-weight:700;line-height:1.6;margin:.2rem 0 .6rem;padding:.55rem .9rem;border-left:5px solid var(--gold);border-radius:0 14px 14px 0;background:color-mix(in srgb,var(--gold) 12%,var(--solid))}
+.keyline{font:.9rem/1.6 var(--sans);margin:0 0 .6rem}.keyline .chip{margin-right:.4rem}
+.onescreen{padding:1rem}
+.os-row{margin:.4rem 0;font-size:.98rem;line-height:1.7}.os-row>b{display:inline-block;min-width:3.4em;margin-right:.5rem;color:var(--gold)}
+.ftr .live{overflow-wrap:anywhere}.ftr .live a{white-space:nowrap}

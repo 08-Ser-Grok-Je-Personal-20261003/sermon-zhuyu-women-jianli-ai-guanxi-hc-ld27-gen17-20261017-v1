@@ -1,6 +1,12 @@
 # 主与我们建立爱的关系 · 创世记17章 · 海德堡要理问答主日27
 # The Lord Establishes a Relationship of Love with Us · Genesis 17 · Heidelberg Catechism LD 27
 
+## 线上链接 / Live links
+
+- GitHub Pages: https://08-ser-grok-je-personal-20261003.github.io/sermon-zhuyu-women-jianli-ai-guanxi-hc-ld27-gen17-20261017-v1/
+- Surge: https://sermon-zhuyu-women-jianli-ai-guanxi-hc-ld27-gen17-20261017-v1.surge.sh
+- Repository: https://github.com/08-Ser-Grok-Je-Personal-20261003/sermon-zhuyu-women-jianli-ai-guanxi-hc-ld27-gen17-20261017-v1
+
 静态、无框架的多页中文网站（HTML / CSS / 原生 JS，无外部库、字体、图片或脚本）。
 A static, framework-free, multi-page Chinese site (HTML / CSS / vanilla JS; no external libraries, fonts, images or scripts).
 
@@ -8,7 +14,7 @@ A static, framework-free, multi-page Chinese site (HTML / CSS / vanilla JS; no e
 
 | 文件 / File | 内容 / Content |
 |---|---|
-| `index.html` | 总入口、30秒速记卡、站点地图 / hub, 30-second memory card, site map |
+| `index.html` | 总入口、30秒速记卡、站点地图、线上链接 / hub, 30-second memory card, site map |
 | `sermon.html` | 完整讲章（背景、本质、四个闭环、四点、多角度、讨论题、扩展、总结表）/ the full sermon |
 | `creeds-read.html` | 三大普世信经：阅读模式与背诵模式（填空、逐句、自测）/ clean reading + memorize modes |
 | `forms-read.html`, `hc.html`, `belgic.html`, `dort.html` | 三项联合信条全文，跳转与即时搜索 / full Three Forms with jump + live search |

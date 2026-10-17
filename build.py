@@ -493,6 +493,12 @@ def heading_toc(body):
     return items
 
 
+LIVE_FOOT = ('<div class="live">线上链接 / Live links：'
+             '<a href="https://08-ser-grok-je-personal-20261003.github.io/sermon-zhuyu-women-jianli-ai-guanxi-hc-ld27-gen17-20261017-v1/" target="_blank" rel="noopener">GitHub Pages</a> · '
+             '<a href="https://sermon-zhuyu-women-jianli-ai-guanxi-hc-ld27-gen17-20261017-v1.surge.sh" target="_blank" rel="noopener">Surge</a> · '
+             '<a href="https://github.com/08-Ser-Grok-Je-Personal-20261003/sermon-zhuyu-women-jianli-ai-guanxi-hc-ld27-gen17-20261017-v1" target="_blank" rel="noopener">Repository</a></div>')
+
+
 def layout(fname, title, desc, body, toc=True, bodycls=""):
     items = heading_toc(body) if toc else []
     has_toc = toc and items
@@ -512,10 +518,11 @@ def layout(fname, title, desc, body, toc=True, bodycls=""):
            '<nav class="nav" id="nav" aria-label="主导航">%s</nav>'
            '<div class="hdr-tools">%s<button id="theme-btn" class="hbtn" type="button">%s<span class="lbl">羊皮纸</span></button>'
            '<button id="nav-btn" class="hbtn only-m" type="button" aria-controls="nav" aria-expanded="false" aria-label="菜单">%s</button></div></header>\n') % (bodycls, sprite(), LOGO, nav, toc_btn, icon("palette"), icon("menu"))
+    live = LIVE_FOOT if fname in ("index.html", "resources.html") else ""
     foot = ('<footer class="ftr"><div>主与我们建立爱的关系 · 海德堡要理问答主日27（问72–74）· 创世记17章 · %s · 最后更新 %s（Asia/Taipei）</div>'
             '<div>三大普世信经与三项联合信条的原文均由构建脚本从 <a href="%s" target="_blank" rel="noopener">ccifellowship.org</a> 的存档逐字载入；讲章与解说为本站作者自撰。</div>'
-            '<div><a href="resources.html">资源与出处</a> · <a href="#top">回到顶部</a></div></footer>\n'
-            '<button id="totop" type="button" aria-label="回到顶部">%s</button>\n') % (VERSION, BUILD_DATE, SITE, icon("up"))
+            '%s<div><a href="resources.html">资源与出处</a> · <a href="#top">回到顶部</a></div></footer>\n'
+            '<button id="totop" type="button" aria-label="回到顶部">%s</button>\n') % (VERSION, BUILD_DATE, SITE, live, icon("up"))
     scripts = '<script src="assets/app.js" defer></script>\n'
     extra = PAGE_SCRIPTS.get(fname, [])
     for s in extra:
