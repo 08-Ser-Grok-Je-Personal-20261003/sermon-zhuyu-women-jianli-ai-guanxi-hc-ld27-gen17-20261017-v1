@@ -1,0 +1,78 @@
+<header class="sec">
+  <h1 style="font-size:clamp(1.6rem,1.2rem+2.4vw,2.6rem);margin-bottom:.3em">{{I brain icolor-c}} 速记中心</h1>
+  <p class="lead" style="font-size:1rem">闪卡、小测验、间隔复习表和一页可打印摘要。进度只保存在你这台设备的浏览器里，不会上传。</p>
+  <div class="chips no-print"><a class="chip gold" href="#h-cards">闪卡</a><a class="chip grace" href="#h-quiz">测验</a><a class="chip water" href="#h-spaced">间隔复习</a><a class="chip creed" href="#h-creedquiz">信经测验</a><a class="chip rose" href="#h-print">打印摘要</a></div>
+</header>
+
+<section class="sec no-print" id="s-cards">
+  <h2 id="h-cards"><span class="num">1</span>闪卡</h2>
+  <p>点击卡片翻面；点蓝色空格显示答案；然后选择“记得”“模糊”“忘了”。系统会让不熟的卡更常出现（Leitner 盒子，共5箱）。</p>
+  <div class="ctrl" role="group" aria-label="选择卡组">
+    <button class="hbtn" data-deck="heads" aria-pressed="true">四个要点</button>
+    <button class="hbtn" data-deck="texts" aria-pressed="false">关键经文</button>
+    <button class="hbtn" data-deck="concepts" aria-pressed="false">概念</button>
+    <button class="hbtn" data-deck="hc74" aria-pressed="false">HC 问74 填空</button>
+    <button class="hbtn" data-deck="creed" aria-pressed="false">信经下一句</button>
+    <button class="hbtn" data-deck="all" aria-pressed="false">全部</button>
+  </div>
+  <div class="bar" aria-hidden="true"><i id="fc-bar"></i></div>
+  <p class="muted small" id="fc-stat" style="font-family:var(--sans);text-align:center"></p>
+  <div class="fc" id="fc" tabindex="0" role="button" aria-label="闪卡，点击翻面"><div class="fc-in">
+    <div class="fc-face fc-front"><span class="k" id="fc-k"></span><div class="q" id="fc-q"></div><span class="muted small" id="fc-box" style="font-family:var(--sans)"></span></div>
+    <div class="fc-face fc-back"><span class="k">答案</span><div id="fc-a"></div></div>
+  </div></div>
+  <div class="ctrl"><button class="btn sm line" data-grade="bad" type="button">✗ 忘了</button><button class="btn sm line" data-grade="hard" type="button">△ 模糊</button><button class="btn sm" data-grade="good" type="button">✓ 记得</button><button class="btn sm line" id="fc-skip" type="button">跳过</button><button class="btn sm line" id="fc-reset" type="button">重置进度</button></div>
+  <div class="co info rv"><div><b class="t">说明</b><p>“HC 问74 填空”与“信经下一句”两个卡组的文字，来自页面内嵌的原文数据（逐字），浏览器只负责把部分文字遮住。其余卡片是笔者自撰；经文卡片只写大意，请对照圣经。</p></div></div>
+</section>
+
+<section class="sec no-print" id="s-quiz">
+  <h2 id="h-quiz"><span class="num">2</span>讲章小测验</h2>
+  <div class="card quiz" id="quiz-cov"><div class="q-text"></div><div class="q-opts"></div><div class="q-fb" role="status"></div><div class="ctrl"><span class="q-score"></span><button class="btn sm q-next" type="button" hidden>下一题</button></div></div>
+</section>
+
+<section class="sec no-print" id="s-creedquiz">
+  <h2 id="h-creedquiz"><span class="num">3</span>信经测验</h2>
+  <p>题目与选项都取自信经原文，由浏览器随机抽取。</p>
+  <div class="card quiz" id="quiz-creed">
+    <div class="ctrl" style="justify-content:flex-start"><select aria-label="选择信经"><option value="apostles">使徒信经</option><option value="nicene">尼西亚信经</option><option value="athanasian">亚他那修信经</option></select>
+    <span class="seg" role="group" aria-label="题型"><button type="button" data-kind="next" aria-pressed="true">下一句</button><button type="button" data-kind="order" aria-pressed="false">排顺序</button></span></div>
+    <div class="q-text"></div><div class="q-opts"></div><div class="q-fb" role="status"></div><div class="ctrl"><span class="q-score"></span><button class="btn sm q-next" type="button" hidden>下一题</button></div>
+  </div>
+</section>
+
+<section class="sec no-print" id="s-spaced">
+  <h2 id="h-spaced"><span class="num">4</span>间隔复习表</h2>
+  <div class="tbl-wrap min2 rv"><table>
+   <thead><tr><th>时间</th><th>内容</th><th>时长</th></tr></thead><tbody>
+   <tr><td>第0天（主日）</td><td>读讲章；说出四个要点和口诀“起·印·及·应”</td><td>15分钟</td></tr>
+   <tr><td>第1天</td><td>背HC问74答；闪卡“四个要点”</td><td>10分钟</td></tr>
+   <tr><td>第2天</td><td>关键经文卡（创17:7、罗4:11、徒2:39）</td><td>10分钟</td></tr>
+   <tr><td>第4天</td><td>使徒信经填空；比利时信条第34条再读一遍</td><td>10分钟</td></tr>
+   <tr><td>第7天</td><td>全部卡片；做讲章小测验</td><td>15分钟</td></tr>
+   <tr><td>第14天</td><td>信经测验；向家人讲一遍“记号与印证”</td><td>15分钟</td></tr>
+   <tr><td>第30天</td><td>HC问72–74 通读；复习警戒（三种偏差）</td><td>15分钟</td></tr>
+  </tbody></table></div>
+  <div class="co mem rv"><div><b class="t">记忆</b><p>间隔复习是一种常见的记忆方法：复习的间隔逐渐拉长。上表的节奏是建议，可按自己的生活调整。</p></div></div>
+</section>
+
+<section class="sec" id="s-print">
+  <h2 id="h-print" class="no-print"><span class="num">5</span>一页可打印摘要</h2>
+  <p class="no-print"><button class="btn" type="button" data-print>{{I print}} 打印 / 存为PDF</button></p>
+  <div class="print-sheet">
+    <h3>主与我们建立爱的关系：创世记17章 · 主日27</h3>
+    <p><b>一句福音</b>：主藉着他的宝血，把我们和我们的儿女接入他的约，我们凭信心回应他的爱。</p>
+    <table><thead><tr><th>要点</th><th>一句话</th><th>经文 / 信条</th></tr></thead><tbody>
+      <tr><td>① 出于神</td><td>神主动发起，我们是被立约的</td><td>创17:1–8</td></tr>
+      <tr><td>② 由宝血印证</td><td>记号是印证，不是救恩本身</td><td>罗4:11；西2:11–12；HC 问69–70</td></tr>
+      <tr><td>③ 包括儿女</td><td>应许给你们和你们的儿女</td><td>创17:7；徒2:39；HC 问74</td></tr>
+      <tr><td>④ 凭信回应</td><td>约有应许，也有呼召与警告</td><td>创17:1、14；罗2:28–29</td></tr></tbody></table>
+    <p><b>口诀</b>：起 · 印 · 及 · 应</p>
+    <p><b>三种偏差</b>：洗礼重生论 · 重洗派 · 假定性的“自动得救”</p>
+    {{SENT HC 74 answer | 因为他们与父母同属于神的圣约和教会}}
+    {{SENT HC 74 answer | 割礼已被洗礼所取代}}
+    <p class="muted small">来源：ccifellowship.org 存档（引文）。笔者自撰部分以本站为准。</p>
+  </div>
+</section>
+{{DATA creeds}}
+{{DATA hc74}}
+<script type="application/json" id="cards-data">{"heads": [{"tag": "四点 ①", "q": "第一点：这圣约……？", "a": "出于神。神主动发起、神应许、神立约（创17:1–8）。我们是被立约的，不是谈判的。"}, {"tag": "四点 ②", "q": "第二点：这圣约……？", "a": "由宝血印证。割礼的流血指向基督的血；洗礼是印证（罗4:11；西2:11–12；HC 问69–70）。"}, {"tag": "四点 ③", "q": "第三点：这圣约……？", "a": "包括我们的儿女。记号给信徒的孩子（创17:7、12；徒2:39；HC 问74）。"}, {"tag": "四点 ④", "q": "第四点：这圣约……？", "a": "呼召我们凭信心回应。约有应许，也有呼召与警告（创17:1、14；罗2:28–29）。"}, {"tag": "口诀", "q": "四点的口诀是什么？", "a": "起 · 印 · 及 · 应：神起头；血来印；及儿女；信来应。"}, {"tag": "一句福音", "q": "用一句话说出这篇讲章的福音。", "a": "主藉着他的宝血，把我们和我们的儿女接入他的约，我们凭信心回应他的爱。"}, {"tag": "题目", "q": "讲章的题目、经文、要理问答分别是什么？", "a": "题目：主与我们建立爱的关系；经文：创世记17章；要理问答：主日27（问72–74）。"}], "texts": [{"q": "创17:1–2 讲什么？", "a": "大意：亚伯兰99岁，神自称“全能的神”，要他行在神面前、作完全人，并说要立约。"}, {"q": "创17:7 讲什么？", "a": "大意：神要与亚伯拉罕和他的后裔立永远的约，作他们的神。（请对照圣经。）"}, {"q": "创17:10–14 讲什么？", "a": "大意：割礼是约的记号，家中男子第八日受；不受的要从民中被剪除。"}, {"q": "罗4:11 讲什么？", "a": "大意：亚伯拉罕受割礼的记号，是他未受割礼时因信称义的印证。"}, {"q": "西2:11–13 讲什么？", "a": "大意：基督的割礼，与洗礼中与基督同埋同活相连；神赦免我们一切过犯。"}, {"q": "徒2:38–39 讲什么？", "a": "大意：悔改受洗；应许是给你们和你们的儿女，以及一切远处的人。"}, {"q": "林前7:14 讲什么？", "a": "大意：信徒的儿女是“圣洁”的，指被分别、在约的范围内（FAQ 的讲法见资源页）。"}, {"q": "加3:27–29 讲什么？", "a": "大意：受洗归入基督的人就是亚伯拉罕的后裔，是照应许承受产业的人。"}, {"q": "林前10:1–5 讲什么？", "a": "大意：旷野的百姓同经云与海，仍有多数不蒙神喜悦；警戒我们不要把记号当保险。"}, {"q": "太28:19 讲什么？", "a": "大意：基督吩咐门徒使万民作门徒，奉父、子、圣灵的名给他们施洗。"}], "concepts": [{"q": "“记号”与“印证”的区别？", "a": "记号是可见的标志；印证是神用它向我们保证应许是真的。"}, {"q": "约包括哪两部分？", "a": "应许与义务（呼召我们信靠、顺服）。"}, {"q": "什么是洗礼重生论？", "a": "以为洗礼之水本身使人重生。改革宗否认（HC 问72；BC 34）。"}, {"q": "什么是假定性的“自动得救”？", "a": "以为受洗的孩子必然得救，不需要信心。改革宗不这样说：约有应许，也有警告。"}, {"q": "割礼与洗礼的关系？", "a": "同一个恩典之约的两个记号；割礼已被洗礼所取代（HC 问74的说法）。"}, {"q": "罪 · 救赎 · 感恩 是什么？", "a": "海德堡要理问答的三部分结构：我们的罪与愁苦，神的救赎，我们的感恩。"}, {"q": "重洗派的分歧点是什么？", "a": "记号属于谁，以及能否重复；他们同样看重个人信心。"}], "quiz": [{"q": "创17章亚伯拉罕立约时多少岁？", "opts": ["75岁", "86岁", "99岁", "100岁"], "a": 2, "why": "创17:1：亚伯兰当时99岁（概述）。"}, {"q": "割礼在孩子出生后第几天施行？", "opts": ["第三天", "第七天", "第八天", "第四十天"], "a": 2, "why": "创17:12：出生后第八日。"}, {"q": "HC 主日27 对应哪几问？", "opts": ["问65–68", "问69–71", "问72–74", "问75–77"], "a": 2, "why": "主日27对应问72–74（问69–71是主日26，问75–77是主日28）。"}, {"q": "四个要点中，“出于神”强调什么？", "opts": ["神主动立约", "人的决定", "教会传统", "仪式本身"], "a": 0, "why": "第一点强调神主动发起（创17:1–2）。"}, {"q": "以下哪一项不是改革宗所接受的？", "opts": ["洗礼是印证", "洗礼之水使人重生", "孩子被纳入约", "约有警告"], "a": 1, "why": "洗礼之水使人重生是改革宗所否认的（HC 问72；BC 34）。"}, {"q": "哪一条信条专门谈洗礼？", "opts": ["比利时信条第27条", "比利时信条第34条", "比利时信条第7条", "比利时信条第16条"], "a": 1, "why": "第34条论圣洗礼。"}, {"q": "多特信经 I.17 谈的是什么？", "opts": ["信徒婴孩离世的牧养", "重洗派", "圣餐", "教会治理"], "a": 0, "why": "I.17 的范围是信徒的孩子在婴幼期离世。"}, {"q": "“记号”是什么意思？", "opts": ["救恩本身", "指向应许的可见标志", "人的功劳", "仪式的魔力"], "a": 1, "why": "记号指向应许，本身不是救恩。"}, {"q": "洗礼“取代”割礼，主要根据什么？", "opts": ["同一个恩典之约", "风俗", "教会历史", "个人感觉"], "a": 0, "why": "根据是同一个恩典之约，而不是同一种仪式（HC 问74）。"}, {"q": "“起·印·及·应”里的“及”指什么？", "opts": ["及时", "及儿女", "及格", "及早"], "a": 1, "why": "“及”指应许及于儿女。"}]}</script>

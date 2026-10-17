@@ -1,0 +1,30 @@
+<header class="sec">
+  <h1 style="font-size:clamp(1.6rem,1.2rem+2.4vw,2.6rem);margin-bottom:.3em">{{I layers icolor-n}} 三项联合信条 · 阅读入口</h1>
+  <p class="lead" style="font-size:1rem">海德堡要理问答、比利时信条、多特信经：欧陆改革宗教会共同持守的三份信条。全文由构建脚本从 corpus 逐字载入，每个条文都有原站链接。每个页面都有跳转栏和即时搜索。</p>
+</header>
+<div class="grid">
+  <a class="card sitecard tint-water rv" href="hc.html"><h3>{{I question icolor-w}} 海德堡要理问答</h3><p>1563 · 共 {{VAR n_hcld}} 个主日、{{VAR n_hcq}} 问 · 问答体、第一人称、以“安慰”为中心。</p><span class="go">打开全文 →</span></a>
+  <a class="card sitecard tint-grace rv" href="belgic.html"><h3>{{I book icolor-n}} 比利时信条</h3><p>1561 · 共 {{VAR n_bc}} 条 · 公开的信仰告白，写给逼迫者与会众。</p><span class="go">打开全文 →</span></a>
+  <a class="card sitecard tint-rose rv" href="dort.html"><h3>{{I scale icolor-r}} 多特信经</h3><p>1618–19 · 本站分 {{VAR n_dort_heads}} 页（第三、四项合并）、{{VAR n_dort_art}} 个条目（含“错谬反驳”）· 回应抗辩派。</p><span class="go">打开全文 →</span></a>
+</div>
+<div class="grid">
+  <div class="card tint-gold rv"><h3>{{I search icolor-g}} 快速跳转</h3>
+    <form data-goto="hc.html#q" class="ctrl" style="justify-content:flex-start"><label>HC 问答 <input type="number" min="1" max="129" value="74" style="width:5.5em;padding:.4rem;border-radius:10px;border:1px solid var(--line);background:var(--solid);color:var(--text)"></label><button class="pri" type="submit">前往</button></form>
+    <form data-goto="hc.html#ld" class="ctrl" style="justify-content:flex-start"><label>HC 主日 <input type="number" min="1" max="52" value="27" style="width:5.5em;padding:.4rem;border-radius:10px;border:1px solid var(--line);background:var(--solid);color:var(--text)"></label><button class="pri" type="submit">前往</button></form>
+    <form data-goto="belgic.html#art" class="ctrl" style="justify-content:flex-start"><label>比利时信条第 <input type="number" min="1" max="37" value="34" style="width:5.5em;padding:.4rem;border-radius:10px;border:1px solid var(--line);background:var(--solid);color:var(--text)"> 条</label><button class="pri" type="submit">前往</button></form>
+  </div>
+  <div class="card tint-creed rv"><h3>{{I bookmark icolor-c}} 与本主日相关的条文</h3>
+    <ul class="small" style="font-family:var(--sans)">
+      <li><a href="hc.html#ld26">HC 主日26</a>（问69–71）· <a href="hc.html#ld27">主日27</a>（问72–74）· <a href="hc.html#ld28">主日28</a>（问75–77）</li>
+      <li><a href="hc.html#q65">HC 问65–68</a>（圣礼总论）</li>
+      <li><a href="belgic.html#art33">比利时信条第33条</a>（圣礼）· <a href="belgic.html#art34">第34条</a>（洗礼）</li>
+      <li><a href="dort.html#d1-17">多特信经 I.17</a>（信徒儿女）· <a href="dort.html#d34-17">III/IV.17</a>（方法）</li>
+      <li><a href="creeds-read.html">三大普世信经</a></li>
+    </ul></div>
+</div>
+<div class="co info rv"><div><b class="t">关于原文</b><p>本页所有信条文字来自 corpus/*.json，该存档按 ccifellowship.org 页面逐字抓取；脚注标记以上标显示（^N → <sup>N</sup>），经文引用列表紧随其后。原站个别条目的标记数与引用条数不一致（如HC问25、47、63、88、123），本站按原样呈现，未作修改。</p></div></div>
+<div class="tbl-wrap rv"><table><thead><tr><th>文件</th><th>规模（据 corpus 统计）</th></tr></thead><tbody>
+  <tr><td>海德堡要理问答</td><td>{{VAR n_hcld}} 主日 · {{VAR n_hcq}} 问 · 约 {{VAR chars_hc}} 字（不含空白与脚注标记）</td></tr>
+  <tr><td>比利时信条</td><td>{{VAR n_bc}} 条 · 约 {{VAR chars_bc}} 字</td></tr>
+  <tr><td>多特信经</td><td>{{VAR n_dort_art}} 个条目（I:{{VAR n_dort_art_1}}，II:{{VAR n_dort_art_2}}，III/IV:{{VAR n_dort_art_34}}，V:{{VAR n_dort_art_5}}）· 约 {{VAR chars_dort}} 字</td></tr>
+</tbody></table></div>

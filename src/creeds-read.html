@@ -1,0 +1,54 @@
+<div id="reader" class="reader">
+<header class="sec">
+  <h1 style="font-size:clamp(1.6rem,1.2rem+2.4vw,2.6rem);margin-bottom:.3em">{{I scroll icolor-c}} 三大普世信经 · 干净阅读与背诵</h1>
+  <p class="lead" style="font-size:1rem">使徒信经、尼西亚信经、亚他那修信经。三篇信经的正文<b>只来自</b> corpus/creeds.json（ccifellowship.org 的存档），页面不做任何改写；下面的填空、逐句、自测等背诵模式，只是在浏览器里把同一份文字临时遮盖。</p>
+  <div class="chips"><a class="chip creed" href="#apostles">使徒信经 · {{VAR n_apostles}} 字</a><a class="chip water" href="#nicene">尼西亚信经 · {{VAR n_nicene}} 字</a><a class="chip rose" href="#athanasian">亚他那修信经 · {{VAR n_athanasian}} 字</a><a class="chip gold" href="compare.html#h-creeds">比较三篇信经 →</a></div>
+  <p class="muted small">字数为不含空白的字符数（亚他那修信经含编号）。</p>
+</header>
+
+<div class="sticky-tools no-print" role="toolbar" aria-label="阅读与背诵工具">
+  <span class="seg" id="modes" role="group" aria-label="模式"><button type="button" data-mode="read" aria-pressed="true">阅读</button><button type="button" data-mode="cloze" aria-pressed="false">填空</button><button type="button" data-mode="prog" aria-pressed="false">逐句</button><button type="button" data-mode="test" aria-pressed="false">自测</button></span>
+  <label>字号 <input id="fs" type="range" min="1" max="2.2" step="0.05" value="1.35" aria-label="字号"><span id="fs-val" class="muted small">135%</span></label>
+  <button id="ln-btn" class="hbtn" type="button" aria-pressed="false">{{I list}} 行号</button>
+  <span class="seg" role="group" aria-label="主题"><button type="button" data-settheme="parchment" aria-pressed="false">羊皮纸</button><button type="button" data-settheme="light" aria-pressed="false">亮</button><button type="button" data-settheme="dark" aria-pressed="false">暗</button></span>
+  <span data-cfg hidden style="display:inline-flex;gap:.5rem;align-items:center;flex-wrap:wrap">
+    <select id="gran" aria-label="遮盖方式"><option value="phrase">按短语遮盖</option><option value="char">按字遮盖</option><option value="line">按整行遮盖</option></select>
+    <label>每第 <input id="nth" type="range" min="2" max="8" value="3" aria-label="每第N个"><b id="nth-val">3</b> 个</label>
+    <button id="reshuffle" class="hbtn" type="button">{{I shuffle}} 换一批</button>
+    <button id="reveal-all" class="hbtn" type="button">全部显示</button><button id="hide-all" class="hbtn" type="button">全部遮住</button>
+  </span>
+</div>
+
+<section class="sec creed-sec" id="apostles" data-creed="apostles">
+  <h2 id="h-apostles"><span class="num">I</span>使徒信经</h2>
+  <p class="muted small" style="font-family:var(--sans);font-size:.88rem">ccifellowship.org 的说明（概述）：因为它总结了使徒的教导而得名，并不是使徒所写；今天的文本以公元400年左右罗马教会所用的信经为基础，其启用可追溯到更早约二百年。</p>
+  {{CREED apostles}}
+  <div class="practice card" hidden></div>
+</section>
+
+<section class="sec creed-sec" id="nicene" data-creed="nicene">
+  <h2 id="h-nicene"><span class="num">II</span>尼西亚信经</h2>
+  <p class="muted small" style="font-family:var(--sans);font-size:.88rem">ccifellowship.org 的说明（概述）：又称尼西亚—君士坦丁堡信经，针对亚流主义等否认基督神性的异端；325年尼西亚会议驳斥这些异端，正式采纳是在381年的君士坦丁堡会议；东西方教会在“圣灵从父和子而出”一点上有分歧。</p>
+  {{CREED nicene}}
+  <div class="practice card" hidden></div>
+</section>
+
+<section class="sec creed-sec" id="athanasian" data-creed="athanasian">
+  <h2 id="h-athanasian"><span class="num">III</span>亚他那修信经</h2>
+  <p class="muted small" style="font-family:var(--sans);font-size:.88rem">ccifellowship.org 的说明（概述）：以亚他那修（293–373）命名，但他并非作者；最早出现在6世纪上半叶，作者不详，源于西方教会，东正教不予认可；又称“Quicunque”。</p>
+  {{CREED athanasian}}
+  <div class="practice card" hidden></div>
+</section>
+
+<section class="sec" id="s-howto">
+  <h2 id="h-howto"><span class="num">?</span>怎样背：一个五步法</h2>
+  <ol class="steps">
+    <li><b>读</b>：出声读三遍，不看填空。</li>
+    <li><b>填空</b>：先“每第4个短语”，再“每第3个”，再“每第2个”。</li>
+    <li><b>逐句</b>：先在心里背出灰色的下一句，再点击核对。</li>
+    <li><b>自测</b>：根据上一句默写下一句。</li>
+    <li><b>隔天复习</b>：第1、2、4、7、14天各一遍（见<a href="memorize.html">速记中心</a>）。</li>
+  </ol>
+  <div class="co info rv"><div><b class="t">三篇各自的位置</b><p>使徒信经是最简短的“信仰总纲”；尼西亚信经回答“基督是不是真神”；亚他那修信经讲清“一神三位、基督二性”。详见<a href="compare.html#h-creeds">信经比较</a>。</p></div></div>
+</section>
+</div>
